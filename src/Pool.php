@@ -106,9 +106,9 @@ class Pool implements PluginInterface
         $this->configuration = new Configuration();
         $this->configuration->setPair('graph_category', $this->categorySlug);
         $this->configuration->setPair('graph_title', $this->title);
-        $this->configuration->setPair('current_size', 'Current Pool size');
-        $this->configuration->setPair('current_queued_calls', 'Current Queued call count');
-        $this->configuration->setPair('current_idle_workers', 'Current Idle Workers count');
+        $this->configuration->setPair('current_size.label', 'Current Pool size');
+        $this->configuration->setPair('current_queued_calls.label', 'Current Queued call count');
+        $this->configuration->setPair('current_idle_workers.label', 'Current Idle Workers count');
 
         return \React\Promise\resolve($this->configuration);
     }

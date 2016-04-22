@@ -296,16 +296,16 @@
         },
         {
             "name": "react/promise",
-            "version": "v2.2.2",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "3aacad8bf10c7d83e6fa2089d413529888c2bedf"
+                "reference": "f942da7b505d1a294284ab343d05df42d02ad6d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/3aacad8bf10c7d83e6fa2089d413529888c2bedf",
-                "reference": "3aacad8bf10c7d83e6fa2089d413529888c2bedf",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/f942da7b505d1a294284ab343d05df42d02ad6d9",
+                "reference": "f942da7b505d1a294284ab343d05df42d02ad6d9",
                 "shasum": ""
             },
             "require": {
@@ -336,7 +336,7 @@
                 }
             ],
             "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "time": "2016-02-26 19:09:02"
+            "time": "2016-03-31 13:10:33"
         },
         {
             "name": "react/socket",
@@ -429,25 +429,25 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.3",
+            "version": "v3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "2a4ee40acb880c56f29fb1b8886e7ffe94f3b995"
+                "reference": "0047c8366744a16de7516622c5b7355336afae96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/2a4ee40acb880c56f29fb1b8886e7ffe94f3b995",
-                "reference": "2a4ee40acb880c56f29fb1b8886e7ffe94f3b995",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/0047c8366744a16de7516622c5b7355336afae96",
+                "reference": "0047c8366744a16de7516622c5b7355336afae96",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -474,7 +474,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-02-23 07:41:20"
+            "time": "2016-03-04 07:55:57"
         },
         {
             "name": "tivie/php-os-detector",
@@ -578,26 +578,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/PhuninNode.git",
-                "reference": "b1a791b7d94825b91feed9d14713a41b9f22a34c"
+                "reference": "c2d8d110d9d38e2561c68f6e223f1e2f10d87b0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/b1a791b7d94825b91feed9d14713a41b9f22a34c",
-                "reference": "b1a791b7d94825b91feed9d14713a41b9f22a34c",
+                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/c2d8d110d9d38e2561c68f6e223f1e2f10d87b0d",
+                "reference": "c2d8d110d9d38e2561c68f6e223f1e2f10d87b0d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.0",
+                "php": "^7.0",
                 "psr/log": "^1.0",
-                "react/promise": "~2.0",
+                "react/promise": "^2.2",
                 "react/socket": "^0.4",
-                "symfony/yaml": "^2.4"
+                "react/stream": "^0.4.2",
+                "symfony/yaml": "^2.4||^3.0"
             },
             "require-dev": {
-                "php": ">=5.5.0",
-                "phpunit/phpunit": "^4.0",
-                "squizlabs/php_codesniffer": "^1.5",
-                "vectorface/dunit": "^2.0"
+                "clue/block-react": "^1.1",
+                "phpunit/phpunit": "^5.0",
+                "squizlabs/php_codesniffer": "^2.6"
             },
             "bin": [
                 "phunin-node"
@@ -630,20 +630,20 @@
                 "reactphp",
                 "statistics"
             ],
-            "time": "2015-10-19 13:27:54"
+            "time": "2016-04-15 05:48:40"
         },
         {
             "name": "wyrihaximus/react-child-process-messenger",
-            "version": "2.7.0",
+            "version": "2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/reactphp-child-process-messenger.git",
-                "reference": "d7a2cce2c49409fb435528db484058c3fe31d0e9"
+                "reference": "8b4e8c611b51e2949f46630495e521f9ae293567"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/reactphp-child-process-messenger/zipball/d7a2cce2c49409fb435528db484058c3fe31d0e9",
-                "reference": "d7a2cce2c49409fb435528db484058c3fe31d0e9",
+                "url": "https://api.github.com/repos/WyriHaximus/reactphp-child-process-messenger/zipball/8b4e8c611b51e2949f46630495e521f9ae293567",
+                "reference": "8b4e8c611b51e2949f46630495e521f9ae293567",
                 "shasum": ""
             },
             "require": {
@@ -678,30 +678,31 @@
                 }
             ],
             "description": "Messenger decorator for react/child-process",
-            "time": "2016-03-07 17:24:45"
+            "time": "2016-03-19 22:07:54"
         },
         {
             "name": "wyrihaximus/react-child-process-pool",
-            "version": "1.0.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/reactphp-child-process-pool.git",
-                "reference": "cb33aea29699eeb38533d66c38d0aba468df4106"
+                "reference": "285177394cb557620f11c383db61be2a6429a313"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/reactphp-child-process-pool/zipball/cb33aea29699eeb38533d66c38d0aba468df4106",
-                "reference": "cb33aea29699eeb38533d66c38d0aba468df4106",
+                "url": "https://api.github.com/repos/WyriHaximus/reactphp-child-process-pool/zipball/285177394cb557620f11c383db61be2a6429a313",
+                "reference": "285177394cb557620f11c383db61be2a6429a313",
                 "shasum": ""
             },
             "require": {
                 "evenement/evenement": "^2.0",
                 "php": "^5.4||^7.0",
                 "wyrihaximus/cpu-core-detector": "^1.0.0",
-                "wyrihaximus/react-child-process-messenger": "^2.7",
+                "wyrihaximus/react-child-process-messenger": "^2.7.1",
                 "wyrihaximus/ticking-promise": "^1.5"
             },
             "require-dev": {
+                "clue/block-react": "^1.1",
                 "phake/phake": "^2.2.1",
                 "phpunit/phpunit": "^4.0||^5.0",
                 "squizlabs/php_codesniffer": "^1.5.6",
@@ -726,7 +727,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2016-03-12 21:52:19"
+            "time": "2016-04-10 08:07:48"
         },
         {
             "name": "wyrihaximus/react-child-process-promise",

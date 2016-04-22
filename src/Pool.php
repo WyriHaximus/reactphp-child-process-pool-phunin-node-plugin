@@ -84,7 +84,7 @@ class Pool implements PluginInterface
     /**
      * {@inheritdoc}
      */
-    public function getSlug()
+    public function getSlug(): string
     {
         return $this->slug;
     }
@@ -92,7 +92,7 @@ class Pool implements PluginInterface
     /**
      * {@inheritdoc}
      */
-    public function getCategorySlug()
+    public function getCategorySlug(): string
     {
         return $this->categorySlug;
     }

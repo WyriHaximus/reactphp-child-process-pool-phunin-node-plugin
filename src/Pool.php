@@ -16,6 +16,7 @@ use WyriHaximus\PhuninNode\Configuration;
 use WyriHaximus\PhuninNode\Metric;
 use WyriHaximus\PhuninNode\Node;
 use WyriHaximus\PhuninNode\PluginInterface;
+use WyriHaximus\React\ChildProcess\Pool\Info;
 use WyriHaximus\React\ChildProcess\Pool\PoolInfoInterface;
 use function React\Promise\resolve;
 
@@ -123,14 +124,10 @@ class Pool implements PluginInterface
     {
         $info = $this->pool->info();
         $storage = new \SplObjectStorage();
-        $storage->attach(new Metric('current_size', $info['size']));
-        $storage->attach(new Metric('current_queued_calls', $info['queued_calls']));
-        $storage->attach(new Metric('current_idle_workers', $info['idle_workers']));
+        $storage->attach(new Metric('current_size', $info[Info::SIZE]));
+        $storage->attach(new Metric('current_busy', $info[Info::BUSY]));
+        $storage->attach(new Metric('current_queued_calls', $info[Info::CALLS]));
+        $storage->attach(new Metric('current_idle_workers', $info[Info::IDLE]));
         return resolve($storage);
-        $storage->attach(new Value('current_size',         $info[Info::SIZE]));
-        $storage->attach(new Value('current_busy',         $info[Info::BUSY]));
-        $storage->attach(new Value('current_queued_calls', $info[Info::CALLS]));
-        $storage->attach(new Value('current_idle_workers', $info[Info::IDLE]));
-        return \React\Promise\resolve($storage);
     }
 }

@@ -10,14 +10,13 @@
         }
     ],
     "require": {
-        "php": ">=5.5.0",
+        "php": "^7.0",
         "wyrihaximus/react-child-process-pool": "^1.0",
         "wyrihaximus/phunin-node": "dev-master",
         "wyrihaximus/react-child-process-messenger": "^2.3"
     },
     "require-dev": {
         "phake/phake": "^1.0.6",
-        "vectorface/dunit": "^2.0",
         "squizlabs/php_codesniffer": "^1.5",
         "phpunit/phpunit": "^4.0"
     },

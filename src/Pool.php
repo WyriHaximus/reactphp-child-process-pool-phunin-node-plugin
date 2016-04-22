@@ -104,9 +104,9 @@ class Pool implements PluginInterface
         }
 
         $this->configuration = new Configuration();
-        $this->configuration->setPair('graph_category',             $this->categorySlug);
-        $this->configuration->setPair('graph_title',                $this->title);
-        $this->configuration->setPair('current_size.label',         'Current Pool size');
+        $this->configuration->setPair('graph_category', $this->categorySlug);
+        $this->configuration->setPair('graph_title', $this->title);
+        $this->configuration->setPair('current_size.label', 'Current Pool size');
         $this->configuration->setPair('current_queued_calls.label', 'Current Queued call count');
         $this->configuration->setPair('current_idle_workers.label', 'Current Idle Workers count');
 
@@ -120,7 +120,7 @@ class Pool implements PluginInterface
     {
         $info = $this->pool->info();
         $storage = new \SplObjectStorage();
-        $storage->attach(new Metric('current_size',         $info['size']));
+        $storage->attach(new Metric('current_size', $info['size']));
         $storage->attach(new Metric('current_queued_calls', $info['queued_calls']));
         $storage->attach(new Metric('current_idle_workers', $info['idle_workers']));
         return \React\Promise\resolve($storage);

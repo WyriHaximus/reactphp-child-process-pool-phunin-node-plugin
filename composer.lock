@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "11f95d5ef9ab73e8b427478b0ab306da",
-    "content-hash": "0dacccc49f9d1a3e51f21352bb56e209",
+    "hash": "3c6b4de1a5b152f4be10bfbd8faf9080",
+    "content-hash": "55ac521af85173d5d9350bc8bccdb5bd",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -578,12 +578,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/PhuninNode.git",
-                "reference": "c2d8d110d9d38e2561c68f6e223f1e2f10d87b0d"
+                "reference": "2c3d72c403e3398d87bb34e931e41b423015e438"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/c2d8d110d9d38e2561c68f6e223f1e2f10d87b0d",
-                "reference": "c2d8d110d9d38e2561c68f6e223f1e2f10d87b0d",
+                "url": "https://api.github.com/repos/WyriHaximus/PhuninNode/zipball/2c3d72c403e3398d87bb34e931e41b423015e438",
+                "reference": "2c3d72c403e3398d87bb34e931e41b423015e438",
                 "shasum": ""
             },
             "require": {
@@ -630,7 +630,7 @@
                 "reactphp",
                 "statistics"
             ],
-            "time": "2016-04-15 05:48:40"
+            "time": "2016-04-21 06:45:09"
         },
         {
             "name": "wyrihaximus/react-child-process-messenger",
@@ -1854,59 +1854,6 @@
                 "standards"
             ],
             "time": "2014-12-04 22:32:15"
-        },
-        {
-            "name": "vectorface/dunit",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Vectorface/dunit.git",
-                "reference": "3f04c7a8bef5ff100666e92db96e93f80a6640bf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Vectorface/dunit/zipball/3f04c7a8bef5ff100666e92db96e93f80a6640bf",
-                "reference": "3f04c7a8bef5ff100666e92db96e93f80a6640bf",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.3",
-                "symfony/console": "~2.5"
-            },
-            "bin": [
-                "bin/dunit"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Vectorface\\Dunit\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Bruce",
-                    "email": "dbruce@vectorface.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Cory Darby",
-                    "email": "ckdarby@vectorface.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Test code against multiple versions of PHP with the help of docker",
-            "homepage": "https://github.com/Vectorface/dunit",
-            "keywords": [
-                "docker",
-                "php",
-                "phpunit",
-                "testing"
-            ],
-            "time": "2015-03-31 19:30:02"
         }
     ],
     "aliases": [],
@@ -1917,7 +1864,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5.0"
+        "php": "^7.0"
     },
     "platform-dev": []
 }

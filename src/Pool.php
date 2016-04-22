@@ -11,11 +11,13 @@
 
 namespace WyriHaximus\React\ChildProcess\Pool\PhuninNode;
 
+use React\Promise\PromiseInterface;
 use WyriHaximus\PhuninNode\Configuration;
 use WyriHaximus\PhuninNode\Metric;
 use WyriHaximus\PhuninNode\Node;
 use WyriHaximus\PhuninNode\PluginInterface;
 use WyriHaximus\React\ChildProcess\Pool\PoolInfoInterface;
+use function React\Promise\resolve;
 
 /**
  * Class MemoryUsage
@@ -81,7 +83,7 @@ class Pool implements PluginInterface
     /**
      * {@inheritdoc}
      */
-    public function getSlug()
+    public function getSlug(): string
     {
         return $this->slug;
     }
@@ -89,7 +91,7 @@ class Pool implements PluginInterface
     /**
      * {@inheritdoc}
      */
-    public function getCategorySlug()
+    public function getCategorySlug(): string
     {
         return $this->categorySlug;
     }
@@ -97,10 +99,10 @@ class Pool implements PluginInterface
     /**
      * {@inheritdoc}
      */
-    public function getConfiguration()
+    public function getConfiguration(): PromiseInterface
     {
         if ($this->configuration instanceof Configuration) {
-            return \React\Promise\resolve($this->configuration);
+            return resolve($this->configuration);
         }
 
         $this->configuration = new Configuration();
@@ -110,19 +112,19 @@ class Pool implements PluginInterface
         $this->configuration->setPair('current_queued_calls.label', 'Current Queued call count');
         $this->configuration->setPair('current_idle_workers.label', 'Current Idle Workers count');
 
-        return \React\Promise\resolve($this->configuration);
+        return resolve($this->configuration);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getValues()
+    public function getValues(): PromiseInterface
     {
         $info = $this->pool->info();
         $storage = new \SplObjectStorage();
         $storage->attach(new Metric('current_size', $info['size']));
         $storage->attach(new Metric('current_queued_calls', $info['queued_calls']));
         $storage->attach(new Metric('current_idle_workers', $info['idle_workers']));
-        return \React\Promise\resolve($storage);
+        return resolve($storage);
     }
 }

@@ -12,9 +12,9 @@
 namespace WyriHaximus\React\ChildProcess\Pool\PhuninNode;
 
 use WyriHaximus\PhuninNode\Configuration;
+use WyriHaximus\PhuninNode\Metric;
 use WyriHaximus\PhuninNode\Node;
 use WyriHaximus\PhuninNode\PluginInterface;
-use WyriHaximus\PhuninNode\Value;
 use WyriHaximus\React\ChildProcess\Pool\PoolInfoInterface;
 
 /**
@@ -120,9 +120,9 @@ class Pool implements PluginInterface
     {
         $info = $this->pool->info();
         $storage = new \SplObjectStorage();
-        $storage->attach(new Value('current_size',         $info['size']));
-        $storage->attach(new Value('current_queued_calls', $info['queued_calls']));
-        $storage->attach(new Value('current_idle_workers', $info['idle_workers']));
+        $storage->attach(new Metric('current_size',         $info['size']));
+        $storage->attach(new Metric('current_queued_calls', $info['queued_calls']));
+        $storage->attach(new Metric('current_idle_workers', $info['idle_workers']));
         return \React\Promise\resolve($storage);
     }
 }

@@ -83,7 +83,7 @@ class Pool implements PluginInterface
     /**
      * {@inheritdoc}
      */
-    public function getSlug(): string
+    public function getSlug()
     {
         return $this->slug;
     }
@@ -91,7 +91,7 @@ class Pool implements PluginInterface
     /**
      * {@inheritdoc}
      */
-    public function getCategorySlug(): string
+    public function getCategorySlug()
     {
         return $this->categorySlug;
     }
@@ -110,6 +110,7 @@ class Pool implements PluginInterface
         $this->configuration->setPair('graph_title', $this->title);
         $this->configuration->setPair('current_size.label', 'Current Pool size');
         $this->configuration->setPair('current_queued_calls.label', 'Current Queued call count');
+        $this->configuration->setPair('current_busy.label',         'Current Busy worker count');
         $this->configuration->setPair('current_idle_workers.label', 'Current Idle Workers count');
 
         return resolve($this->configuration);
@@ -126,5 +127,10 @@ class Pool implements PluginInterface
         $storage->attach(new Metric('current_queued_calls', $info['queued_calls']));
         $storage->attach(new Metric('current_idle_workers', $info['idle_workers']));
         return resolve($storage);
+        $storage->attach(new Value('current_size',         $info[Info::SIZE]));
+        $storage->attach(new Value('current_busy',         $info[Info::BUSY]));
+        $storage->attach(new Value('current_queued_calls', $info[Info::CALLS]));
+        $storage->attach(new Value('current_idle_workers', $info[Info::IDLE]));
+        return \React\Promise\resolve($storage);
     }
 }

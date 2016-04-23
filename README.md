@@ -6,7 +6,7 @@
 [![License](https://poser.pugx.org/wyrihaximus/react-child-process-pool-phunin-node-plugin/license.png)](https://packagist.org/packages/wyrihaximus/react-child-process-pool-phunin-node-plugin)
 [![PHP 7 ready](http://php7ready.timesplinter.ch/WyriHaximus/reactphp-child-process-pool-phunin-node-plugin/badge.svg)](https://travis-ci.org/WyriHaximus/reactphp-child-process-pool-phunin-node-plugin)
 
-Plain messages and RPC style STDIN/OUT/ERR wrapper around [`react/child-process`](https://github.com/reactphp/child-process)
+[`wyrihaximus/phunin-node` plugin](https://github.com/wyrihaximus/PhuninNode) for [`wyrihaximus/react-child-process-pool`](https://github.com/wyrihaximus/reactphp-child-process-pool/)
 
 ## Installation ##
 

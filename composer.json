@@ -17,8 +17,8 @@
     },
     "require-dev": {
         "phake/phake": "^1.0.6",
-        "squizlabs/php_codesniffer": "^1.5",
-        "phpunit/phpunit": "^5.3"
+        "phpunit/phpunit": "^5.3",
+        "squizlabs/php_codesniffer": "^2.6"
     },
     "autoload": {
         "psr-4": {

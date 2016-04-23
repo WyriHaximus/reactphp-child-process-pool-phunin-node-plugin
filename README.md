@@ -18,7 +18,16 @@ composer require wyrihaximus/react-child-process-pool-phunin-node-plugin
 
 ## Usage ##
 
+```php
+use WyriHaximus\React\ChildProcess\Pool\PhuninNode\Pool;
 
+$node->addPlugin(new Pool(
+    $yourPoolInstance,
+    'Your awesome pool', // Title
+    'your_awesome_pool', // Slug
+    'your_project',      // category
+));
+```
 
 ## Contributing ##
 

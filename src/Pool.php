@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 /*
  * This file is part of PhuninNode.
@@ -124,10 +125,10 @@ class Pool implements PluginInterface
     {
         $info = $this->pool->info();
         $storage = new \SplObjectStorage();
-        $storage->attach(new Metric('current_size', $info[Info::SIZE]));
-        $storage->attach(new Metric('current_busy', $info[Info::BUSY]));
-        $storage->attach(new Metric('current_queued_calls', $info[Info::CALLS]));
-        $storage->attach(new Metric('current_idle_workers', $info[Info::IDLE]));
+        $storage->attach(new Metric('current_size', (float)$info[Info::SIZE]));
+        $storage->attach(new Metric('current_busy', (float)$info[Info::BUSY]));
+        $storage->attach(new Metric('current_queued_calls', (float)$info[Info::CALLS]));
+        $storage->attach(new Metric('current_idle_workers', (float)$info[Info::IDLE]));
         return resolve($storage);
     }
 }

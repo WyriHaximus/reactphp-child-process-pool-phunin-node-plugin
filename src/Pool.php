@@ -97,7 +97,15 @@ class Pool implements PluginInterface
     {
         return $this->categorySlug;
     }
-
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function getCapabilities(): array
+    {
+        return [];
+    }
+    
     /**
      * {@inheritdoc}
      */
